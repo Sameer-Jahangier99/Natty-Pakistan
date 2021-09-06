@@ -1,5 +1,6 @@
 {
   "name": "@coreui/coreui-free-react-admin-template",
+  "proxy": "http://192.168.0.105:5000",
   "description": "CoreUI Free React Admin Template",
   "version": "4.0.0-rc.0",
   "config": {
@@ -29,11 +30,13 @@
     "@coreui/chartjs": "3.0.0",
     "@coreui/coreui": "4.0.1",
     "@coreui/icons": "^2.0.1",
-    "@coreui/icons-react": "^2.0.0-rc.5",
+    "@coreui/icons-react": "^1.1.0",
     "@coreui/react": "4.0.0-rc.0",
     "@coreui/react-chartjs": "2.0.0-rc.0",
     "@coreui/utils": "^1.3.1",
+    "@craco/craco": "^6.2.0",
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.3",
+    "axios": "^0.21.1",
     "chart.js": "^3.5.1",
     "classnames": "^2.3.1",
     "core-js": "^3.16.2",
@@ -49,18 +52,21 @@
   },
   "devDependencies": {
     "auto-changelog": "~2.3.0",
+    "autoprefixer": "^9.8.6",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.1",
+    "postcss": "^7.0.36",
     "prettier": "2.3.2",
     "react-scripts": "^4.0.3",
-    "sass": "^1.38.0"
+    "sass": "^1.38.0",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.9"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
     "lint": "eslint \"src/**/*.js\"",
-    "test": "react-scripts test",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
     "test:cov": "npm test -- --coverage --watchAll=false",
     "test:debug": "react-scripts --inspect-brk test --runInBand",
     "eject": "react-scripts eject",

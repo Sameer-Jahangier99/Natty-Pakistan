@@ -19,6 +19,9 @@ const Spinners = React.lazy(() => import('./views/components/base/spinners/Spinn
 const Tables = React.lazy(() => import('./views/components/base/tables/Tables'))
 const Tooltips = React.lazy(() => import('./views/components/base/tooltips/Tooltips'))
 
+//admin
+const AddUser = React.lazy(() => import('./views/components/admin/AddUser'))
+
 // Buttons
 const Buttons = React.lazy(() => import('./views/components/buttons/buttons/Buttons'))
 const ButtonGroups = React.lazy(() =>
@@ -60,6 +63,7 @@ const routes = [
   { path: '/theme/colors', name: 'Colors', component: Colors },
   { path: '/theme/typography', name: 'Typography', component: Typography },
   { path: '/base', name: 'Base', component: Cards, exact: true },
+  { path: '/adduser', name: 'User', component: AddUser, exact: true },
   { path: '/base/accordion', name: 'Accordion', component: Accordion },
   { path: '/base/breadcrumbs', name: 'Breadcrumbs', component: Breadcrumbs },
   { path: '/base/cards', name: 'Cards', component: Cards },

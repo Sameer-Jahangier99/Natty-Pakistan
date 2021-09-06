@@ -1,7 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { AppContent, AppSidebar, AppFooter, AppHeader } from '../components/index'
-
+import { useSelector } from 'react-redux'
+import { useHistory } from 'react-router'
 const DefaultLayout = () => {
+  const history = useHistory()
+  const userLogin = useSelector((state) => state.userLogin)
+  const { userInfo } = userLogin
+
+  useEffect(() => {
+    if (!userInfo) {
+      history.push('/login')
+    } else if (userInfo && !userInfo.isAdmin) {
+      history.push('/dashboard')
+    }
+  }, [history, userInfo])
   return (
     <div>
       <AppSidebar />
