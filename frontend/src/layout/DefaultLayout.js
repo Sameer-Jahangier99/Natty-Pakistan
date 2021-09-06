@@ -11,7 +11,7 @@ const DefaultLayout = () => {
     if (!userInfo) {
       history.push('/login')
     } else if (userInfo && !userInfo.isAdmin) {
-      history.push('/dashboard')
+      history.push('/home')
     }
   }, [history, userInfo])
   return (
